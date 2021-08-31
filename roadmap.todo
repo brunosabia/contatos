@@ -13,16 +13,6 @@ Criação de Menu:
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-
-
-Fazendo com que contatos sejam levantados a partir de um servico:
-    ✔ Crie um serviço services/Contato @done(21-08-31 10:12)
-    ✔ Declare um atributo privado contatos contendo o array de contatos que, agora, não deve mais estar na component ListaDeContatos @done(21-08-31 10:13)
-    ✔ Crie nesse serviço a função getContatos() que retorna a lista de contatos. @done(21-08-31 10:13)
-    ✔ Importe o serviço ContatoService na Componente ListaDeContatos @done(21-08-31 10:13)
-    ✔ Crie um atributo privado contatoService da classe ContatoService e o intancie. @done(21-08-31 10:13)
-    ✔ No constructor do ListaDeContatosComponent levante os contatos usando contatoService.getContato e atribua-os ao atributo contatos. @done(21-08-31 10:14)
-
 Criação e Exibição do componente que adiciona/cria um novo contato:
     ☐ Crie o componente components/CreateContato
     ☐ Estruture o template dele com base no https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
@@ -39,6 +29,12 @@ Criação e Exibição do componente que adiciona/cria um novo contato:
         ☐ ... escreva aqui os passos ... análogos ao do item anterior.
 
 Archive:
+  ✔ Crie um serviço services/Contato @done(21-08-31 10:12) @project(Fazendo com que contatos sejam levantados a partir de um servico)
+  ✔ Declare um atributo privado contatos contendo o array de contatos que, agora, não deve mais estar na component ListaDeContatos @done(21-08-31 10:13) @project(Fazendo com que contatos sejam levantados a partir de um servico)
+  ✔ Crie nesse serviço a função getContatos() que retorna a lista de contatos. @done(21-08-31 10:13) @project(Fazendo com que contatos sejam levantados a partir de um servico)
+  ✔ Importe o serviço ContatoService na Componente ListaDeContatos @done(21-08-31 10:13) @project(Fazendo com que contatos sejam levantados a partir de um servico)
+  ✔ Crie um atributo privado contatoService da classe ContatoService e o intancie. @done(21-08-31 10:13) @project(Fazendo com que contatos sejam levantados a partir de um servico)
+  ✔ No constructor do ListaDeContatosComponent levante os contatos usando contatoService.getContato e atribua-os ao atributo contatos. @done(21-08-31 10:14) @project(Fazendo com que contatos sejam levantados a partir de um servico)
   ✔ Crie uma pasta "img" dentro da pasta /src/assets/ @done(21-08-30 10:22) @project(Aparência geral)
   ✔ Salve na pasta /src/assets/img a imagem https://github.com/sergiomoura/contatos-html-template/blob/main/img/bg.jpg @done(21-08-30 10:22) @project(Aparência geral)
   ✔ Aplicar geral.css para folha de estilos que será usada no site inteiro. @done(21-08-30 10:22) @project(Aparência geral)

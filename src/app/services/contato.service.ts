@@ -50,7 +50,7 @@ const BASE_DE_CONTATOS:Contato[] = [
   {
     nome: "Mariana Ribeiro",
     email: "mariana@gmail.com",
-    telefones:['1111-0000']
+    telefones:['1111-1000']
   }]
 
 @Injectable({

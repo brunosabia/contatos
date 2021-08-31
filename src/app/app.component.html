@@ -1,2 +1,3 @@
-<app-menu></app-menu>
+<app-menu (onAddContatoClick)="funcao()"></app-menu>
 <app-lista-de-contatos></app-lista-de-contatos>
+<app-create-contato *ngIf="mostrandoModal" (closeModalClick)="funcao1()"></app-create-contato>
