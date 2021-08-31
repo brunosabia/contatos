@@ -1,0 +1,66 @@
+Aparência geral:
+    A pasta assets é uma pasta de arquivos estáticos. Muito apropriada para armazenamento de imagens
+    utilizadas no layout das páginas
+    - https://sergiomoura.github.io/contatos-html-template/home.html
+    - https://github.com/sergiomoura/contatos-html-template
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
+
+Criação de Menu:
+    O conteúdo de menu.component.html dele deve ser o do elemento nav contida em https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
+    - *Observe que o link para sair do sistema não está aparecendo corretamente (exit_to_app)*
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+Fazendo com que contatos sejam levantados a partir de um servico:
+    ✔ Crie um serviço services/Contato @done(21-08-31 10:12)
+    ✔ Declare um atributo privado contatos contendo o array de contatos que, agora, não deve mais estar na component ListaDeContatos @done(21-08-31 10:13)
+    ✔ Crie nesse serviço a função getContatos() que retorna a lista de contatos. @done(21-08-31 10:13)
+    ✔ Importe o serviço ContatoService na Componente ListaDeContatos @done(21-08-31 10:13)
+    ✔ Crie um atributo privado contatoService da classe ContatoService e o intancie. @done(21-08-31 10:13)
+    ✔ No constructor do ListaDeContatosComponent levante os contatos usando contatoService.getContato e atribua-os ao atributo contatos. @done(21-08-31 10:14)
+
+Criação e Exibição do componente que adiciona/cria um novo contato:
+    ☐ Crie o componente components/CreateContato
+    ☐ Estruture o template dele com base no https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
+    ☐ Estilize ele com base nos seletores #modal do arquivo https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css
+    Fazendo com que o componente comece "escondido":
+        ☐ Crie uma propriedade mostrandoCreateContato no componente app.component.ts e atribua a ela false
+        ☐ Marque app-create-contato para que ele só seja exibido se o mostrandoCreateContato seja true (Dica: *ngIf)
+    Fazendo com que ele seja exibido quando o menu seja clicado:
+        ☐ No MenuComponent.ts crie uma função mostrarModalClick que seja executada toda vez que o item "Adicionar Contato" seja clicado.
+        ☐ Crie um emissor de evento e faça com que ele emita um evento na função mostrarModalClick
+        ☐ No app.component.html associe o evento emitido à execução de uma função mostrarModal.
+           Essa função, definida no AppComponent, deve alterar o valor do atributo mostrandoCreateContato para true;
+    Fazendo com que ele seja escondido quando o cancelar seja clicado:
+        ☐ ... escreva aqui os passos ... análogos ao do item anterior.
+
+Archive:
+  ✔ Crie uma pasta "img" dentro da pasta /src/assets/ @done(21-08-30 10:22) @project(Aparência geral)
+  ✔ Salve na pasta /src/assets/img a imagem https://github.com/sergiomoura/contatos-html-template/blob/main/img/bg.jpg @done(21-08-30 10:22) @project(Aparência geral)
+  ✔ Aplicar geral.css para folha de estilos que será usada no site inteiro. @done(21-08-30 10:22) @project(Aparência geral)
+  ✔ Visite: @done(21-08-30 10:22) @project(Aparência geral)
+  ✔ Limpe app.component.html @done(21-08-30 10:22) @project(Aparência geral)
+  ✔ Visite localhost:4200 e verifique se o background já está visível @done(21-08-30 10:22) @project(Aparência geral)
+  ✔ Incorpore os css externos no index.html @done(21-08-30 10:22) @project(Aparência geral)
+  ✔ Criar componentnte components/Menu @done(21-08-30 10:32) @project(Criação de Menu)
+  ✔ Adicione esse componente ao app.component.html @done(21-08-30 10:57) @project(Criação de Menu)
+  ✔ Dê estilo a ele baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css @done(21-08-30 10:57) @project(Criação de Menu)
+  ✔ Importe as fontes do material icon fonts para o seu projeto adicionando a linha de código no index.html @done(21-08-30 10:58) @project(Criação de Menu)
+  ✔ Verifique se o menu aparece corretamente. @done(21-08-30 10:58) @project(Criação de Menu)
+  ✔ Criar o componente components/ListaDeContatos @done(21-08-30 10:59) @project(Criação de Lista de Contatos)
+  ✔ Adicione esse componente ao app.component.html @done(21-08-30 11:00) @project(Criação de Lista de Contatos)
+  ✔ Dê o estilo desse componente baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css @done(21-08-30 11:00) @project(Criação de Lista de Contatos)
+  ✔ Verifique se a lista de contatos aparece corretamente. @done(21-08-30 11:04) @project(Criação de Lista de Contatos)
+  ✔ Criar componente components/Contato @done(21-08-30 11:21) @project(Criação de Componente contato)
+  ✔ Utilizar como componente com componente uma das sections contidas na main do lista-de-contatos.component.html @done(21-08-30 11:21) @project(Criação de Componente contato)
+  ✔ Utilizar o css apropriado para esse componente. @done(21-08-30 11:21) @project(Criação de Componente contato)
+  ✔ Reescrever o html do componente lista de contatos para exibir uma ou duas dezenas de app-contato @done(21-08-30 11:21) @project(Criação de Componente contato)
+  ✔ Crie uma pasta models dentro da pastas src/app @done(21-08-30 11:37) @project(Fazendo que os contatos sejam mais dinâmicos)
+  ✔ Crie nessa pasta models um arquivo Contato.ts @done(21-08-30 11:37) @project(Fazendo que os contatos sejam mais dinâmicos)
+  ✔ Declare na classe ListaDeContatosComponent um atributo contatos do tipo array de contatos @done(21-08-30 13:42) @project(Fazendo que os contatos sejam mais dinâmicos)
+  ✔ Atribua a esse atributo um array com pelo menos 10 contatos @done(21-08-30 13:43) @project(Fazendo que os contatos sejam mais dinâmicos)
+  ✔ Faça com que esses contatos sejam exibidos. @done(21-08-30 13:43) @project(Fazendo que os contatos sejam mais dinâmicos)
