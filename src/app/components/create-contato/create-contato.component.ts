@@ -12,7 +12,7 @@ export class CreateContatoComponent implements OnInit {
   newContato:Contato = {
     nome:"",
     email:"",
-    telefones:["9999","3333","1234"]
+    telefones:["9999"]
   }
 
   constructor() { }
@@ -29,4 +29,13 @@ export class CreateContatoComponent implements OnInit {
     return index;
   }
 
+  addTelefone():void{
+    console.log("teste!");
+    this.newContato.telefones.push("");
+  }
+
+  removeTelefone(i:number):void{
+    console.log("remover telefone!");
+    this.newContato.telefones.splice(i,1);
+  }
 }

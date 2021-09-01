@@ -12,8 +12,8 @@
             Telefone:
             <div *ngFor="let tel of newContato.telefones; let i = index; trackBy:track">
                 <input type="tel" name="telefone_{{i}}" [(ngModel)]="newContato.telefones[i]">
-                <a *ngIf="i == 0"><i class="material-icons">add_circle</i></a>
-                <a *ngIf="i != 0" class="remove" href=""><i class="material-icons">remove_circle</i></a>
+                <a *ngIf="i == 0" (click)="addTelefone()"><i class="material-icons">add_circle</i></a>
+                <a *ngIf="i != 0" class="remove" (click)="removeTelefone(i)"><i class="material-icons">remove_circle</i></a>
                 <!-- {{i}} -->
             </div>
             <!-- <div>
@@ -24,7 +24,9 @@
                 <input type="email" name="email" id="email">
                 <a class="remove" href=""><i class="material-icons">remove_circle</i></a>
             </div> -->
+
             <pre>{{newContato|json}}</pre>
+
         </label>
         <div class="controles">
             <button type="button" class="link" (click)="closeModal()">Cancelar</button>
