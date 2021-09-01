@@ -5,7 +5,7 @@ const BASE_DE_CONTATOS:Contato[] = [
   {
     nome: "Mariana Ribeiro",
     email: "mariana@gmail.com",
-    telefones:['1111-1111']
+    telefones:["1111-1111","2222-2222"]
   },
   {
     nome: "Mariana Ribeiro",

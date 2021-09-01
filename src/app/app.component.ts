@@ -8,14 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'contatos';
-  mostrandoModal = false;
+  mostrandoModal = true;
 
-  funcao(){
+  mostrarModal(){
     console.log("Eu te escutei, meu filho!");
     this.mostrandoModal = true;
   }
 
-  funcao1(){
+  esconderModal(){
     console.log("Fechando Modal!");
     this.mostrandoModal = false;
   }

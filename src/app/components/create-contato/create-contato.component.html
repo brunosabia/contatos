@@ -2,26 +2,29 @@
     <form>
         <label>
             Nome:
-            <input type="text" name="nome" id="nome">
+            <input type="text" name="nome" id="nome"[(ngModel)]="newContato.nome">
         </label>
         <label>
             E-mail:
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" [(ngModel)]="newContato.email">
         </label>
         <label>
             Telefone:
-            <div>
+            <div *ngFor="let tel of newContato.telefones; let i = index; trackBy:track">
+                <input type="tel" name="telefone_{{i}}" [(ngModel)]="newContato.telefones[i]">
+                <a *ngIf="i == 0"><i class="material-icons">add_circle</i></a>
+                <a *ngIf="i != 0" class="remove" href=""><i class="material-icons">remove_circle</i></a>
+                <!-- {{i}} -->
+            </div>
+            <!-- <div>
                 <input type="email" name="email" id="email">
-                <a><i class="material-icons">add_circle</i></a>
+                <a class="remove" href=""><i class="material-icons">remove_circle</i></a>
             </div>
             <div>
                 <input type="email" name="email" id="email">
                 <a class="remove" href=""><i class="material-icons">remove_circle</i></a>
-            </div>
-            <div>
-                <input type="email" name="email" id="email">
-                <a class="remove" href=""><i class="material-icons">remove_circle</i></a>
-            </div>
+            </div> -->
+            <pre>{{newContato|json}}</pre>
         </label>
         <div class="controles">
             <button type="button" class="link" (click)="closeModal()">Cancelar</button>
