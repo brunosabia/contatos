@@ -1,4 +1,3 @@
-import { FunctionCall } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,16 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'contatos';
-  mostrandoModal = true;
+  mostrandoModal = false;
 
   mostrarModal(){
-    console.log("Eu te escutei, meu filho!");
     this.mostrandoModal = true;
   }
 
   esconderModal(){
-    console.log("Fechando Modal!");
     this.mostrandoModal = false;
   }
 }
-

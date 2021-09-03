@@ -1,5 +1,5 @@
-export interface Contato{
+export interface Contato {
     nome:string;
-    email?:string;
-    telefones:string[];
+    email:string;
+    telefones:string[]
 }

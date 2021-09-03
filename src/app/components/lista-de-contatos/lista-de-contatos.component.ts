@@ -9,18 +9,14 @@ import { ContatoService } from 'src/app/services/contato.service';
 })
 export class ListaDeContatosComponent implements OnInit {
 
-  public _contatos: Contato[];
+  public contatos: Contato[];
   private cs:ContatoService = new ContatoService();
-  
-  constructor() { 
-    this._contatos = this.cs.getContatos();
+
+  constructor() {
+    this.contatos = this.cs.getContatos();
   }
 
   ngOnInit(): void {
-  }
-
-  /*public get contatos(): Contato[]{
-    return this._contatos;
-  }*/
+  }  
 
 }

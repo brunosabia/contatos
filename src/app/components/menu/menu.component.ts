@@ -1,5 +1,4 @@
-import { EventEmitter, Output } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -8,22 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  //criando o evento que irá mandar pro appComp o click do addContato para iniciar o evento do Modal
   @Output() onAddContatoClick:EventEmitter<null> = new EventEmitter();
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
   mostrarModalClick(){
+    console.log("Cliquei para abrir o modal!");
     this.onAddContatoClick.emit();
-    console.log('Cliquei para abrir o modal!');
   }
 
   sair(){
-    console.log("pedindo pra sair!");
+    console.log("Pedindo para sair...");
     this.onAddContatoClick.emit();
   }
-
 }

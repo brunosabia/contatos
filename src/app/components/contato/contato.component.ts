@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Contato } from 'src/app/models/Contato';
 
 @Component({
@@ -8,8 +8,8 @@ import { Contato } from 'src/app/models/Contato';
 })
 export class ContatoComponent implements OnInit {
 
-  @Input('a') registro!:Contato;
- 
+  @Input() registro!:Contato;
+
   constructor() { }
 
   ngOnInit(): void {
