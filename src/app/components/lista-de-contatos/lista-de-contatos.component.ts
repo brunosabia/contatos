@@ -14,6 +14,12 @@ export class ListaDeContatosComponent implements OnInit {
 
   constructor() {
     this.contatos = this.cs.getContatos();
+    ContatoService.onContatosMudaram.subscribe(
+      (contatos) => {
+        //pega a lista de contatos local e atualiza com a lista de contatos do localStorage
+        this.contatos = contatos;
+      }
+    )
   }
 
   ngOnInit(): void {
