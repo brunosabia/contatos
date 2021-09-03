@@ -54,15 +54,33 @@ const BASE_DE_CONTATOS:Contato[] = [
 })
 export class ContatoService {
 
+  private readonly chave:string = "CONTATOS";
   constructor() { }
 
   getContatos():Contato[] {
-    console.log(Math.random())
-    return BASE_DE_CONTATOS;
+      //localstorage SÓ GUARDA STRINGS
+    //tentar carregar os dados da localStorage
+    let dados = window.localStorage.getItem(this.chave);
+    //verificar se havia dados na localStorage
+    if(dados){
+      // Se houver dados => transformar em array e retornar os contatos
+      let contatosCarregados:Contato[] = JSON.parse(dados);
+      return contatosCarregados;
+
+    }else{
+      //se não houver dados => guarda essa array vazia no localStorage e retorna array vazia)
+      window.localStorage.setItem(this.chave,"[]")
+      return [];
+    }
   }
 
   addContato(c:Contato): void {
-    BASE_DE_CONTATOS.push(c);
+    //trazer do localstorage em um array
+    let contatos = this.getContatos();
+    //adicionar o contato c ao final do array
+    contatos.push(c);
+    //salvar o array de volta no localStorage
+    window.localStorage.setItem(this.chave,JSON.stringify(contatos));
   }
 
 }
